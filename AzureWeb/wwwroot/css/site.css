@@ -1,0 +1,350 @@
+/* ==========================================================================
+   AzureWeb - Global Styles & Design System
+   ========================================================================== */
+
+:root {
+  --azure-primary: #0078d4;
+  --azure-primary-dark: #005a9e;
+  --azure-primary-light: #00bcf2;
+  --azure-primary-subtle: #eff6fc;
+  --azure-gradient: linear-gradient(135deg, #0078d4 0%, #00a4ef 100%);
+  --azure-surface: #f8fafc;
+  --azure-border: #e2e8f0;
+  --azure-card-bg: #ffffff;
+  --azure-text-heading: #0f172a;
+  --azure-text-body: #334155;
+  --azure-text-muted: #64748b;
+  --azure-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --azure-shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.08);
+  --azure-shadow-lg: 0 12px 28px -4px rgba(15, 23, 42, 0.12);
+  --azure-transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --azure-transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--azure-text-body);
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Helpers */
+.fw-extrabold {
+  font-weight: 800;
+}
+
+.tracking-wide {
+  letter-spacing: 0.075em;
+}
+
+.max-w-700 {
+  max-width: 700px;
+}
+
+.bg-surface {
+  background-color: var(--azure-surface);
+}
+
+.gradient-text {
+  background: var(--azure-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Navbar */
+.navbar-cloud {
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+  transition: box-shadow var(--azure-transition-fast);
+}
+
+.brand-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-text {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--azure-text-heading);
+}
+
+.navbar-cloud .nav-link {
+  font-weight: 500;
+  color: var(--azure-text-muted);
+  padding-left: 0.85rem;
+  padding-right: 0.85rem;
+  transition: color var(--azure-transition-fast);
+}
+
+.navbar-cloud .nav-link:hover,
+.navbar-cloud .nav-link.active {
+  color: var(--azure-primary);
+}
+
+/* Primary Button Styling */
+.btn-primary {
+  background-color: var(--azure-primary);
+  border-color: var(--azure-primary);
+  color: #ffffff;
+  font-weight: 600;
+  transition: transform var(--azure-transition-fast), background-color var(--azure-transition-fast), box-shadow var(--azure-transition-fast);
+}
+
+.btn-primary:hover {
+  background-color: var(--azure-primary-dark);
+  border-color: var(--azure-primary-dark);
+  transform: translateY(-1px);
+}
+
+.btn-outline-secondary {
+  border-color: var(--azure-border);
+  color: var(--azure-text-body);
+  font-weight: 500;
+  transition: all var(--azure-transition-fast);
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--azure-surface);
+  border-color: #cbd5e1;
+  color: var(--azure-text-heading);
+  transform: translateY(-1px);
+}
+
+/* Hero Section */
+.hero-section {
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+.hero-background-glow {
+  position: absolute;
+  top: -100px;
+  right: -50px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0, 120, 212, 0.09) 0%, rgba(0, 164, 239, 0.03) 40%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.inline-badge {
+  background-color: var(--azure-primary-subtle);
+  border: 1px solid rgba(0, 120, 212, 0.2);
+  padding: 0.35rem 0.85rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--azure-primary-dark);
+}
+
+.live-pulse {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.6);
+  }
+  70% {
+    box-shadow: 0 0 0 6px rgba(16, 185, 129, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+  }
+}
+
+.hero-title {
+  color: var(--azure-text-heading);
+  line-height: 1.15;
+}
+
+.hero-lead {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+/* Hero Visual Card & Console */
+.hero-visual-card {
+  border-color: var(--azure-border) !important;
+  box-shadow: var(--azure-shadow-lg) !important;
+  transition: transform var(--azure-transition-normal);
+}
+
+.hero-visual-card:hover {
+  transform: translateY(-2px);
+}
+
+.card-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.system-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.stat-box {
+  border: 1px solid var(--azure-border);
+}
+
+.console-box {
+  background-color: #0b1120;
+  border: 1px solid #1e293b;
+  line-height: 1.6;
+}
+
+/* Metrics Section */
+.metric-card {
+  background-color: #ffffff;
+  border: 1px solid var(--azure-border);
+  transition: border-color var(--azure-transition-fast), box-shadow var(--azure-transition-fast);
+}
+
+.metric-card:hover {
+  border-color: rgba(0, 120, 212, 0.3);
+  box-shadow: var(--azure-shadow-md);
+}
+
+/* Service Cards */
+.service-card {
+  border-color: var(--azure-border) !important;
+  transition: transform var(--azure-transition-normal), box-shadow var(--azure-transition-normal), border-color var(--azure-transition-fast);
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--azure-shadow-lg);
+  border-color: rgba(0, 120, 212, 0.35) !important;
+}
+
+.service-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background-color: var(--azure-primary-subtle);
+  transition: transform var(--azure-transition-fast), background-color var(--azure-transition-fast);
+}
+
+.service-card:hover .service-icon-wrapper {
+  background-color: var(--azure-primary);
+  color: #ffffff !important;
+  transform: scale(1.05);
+}
+
+/* Step Cards */
+.step-card {
+  border-color: var(--azure-border) !important;
+  position: relative;
+  transition: transform var(--azure-transition-normal), box-shadow var(--azure-transition-normal);
+}
+
+.step-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--azure-shadow-md);
+}
+
+.step-number {
+  font-size: 1.8rem;
+  letter-spacing: -0.05em;
+  opacity: 0.85;
+}
+
+/* Call to Action Banner */
+.cta-banner {
+  background: linear-gradient(135deg, #091e42 0%, #004578 100%);
+  box-shadow: var(--azure-shadow-lg);
+}
+
+.cta-glow {
+  position: absolute;
+  right: -80px;
+  bottom: -80px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(0, 164, 239, 0.3) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Footer Styling */
+.footer-cloud {
+  background-color: #ffffff;
+  color: var(--azure-text-muted);
+}
+
+.footer-heading {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--azure-text-heading);
+  margin-bottom: 1rem;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: var(--azure-text-muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color var(--azure-transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--azure-primary);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #10b981;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Accessibility: prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .service-card:hover,
+  .step-card:hover,
+  .hero-visual-card:hover,
+  .btn:hover {
+    transform: none !important;
+  }
+}

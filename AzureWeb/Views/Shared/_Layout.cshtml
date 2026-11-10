@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - AzureWeb Cloud Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/AzureWeb.styles.css" asp-append-version="true"/>
+</head>
+<body>
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-cloud bg-white border-bottom">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" asp-area="" asp-controller="Home" asp-action="Index">
+                <span class="brand-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.04C2.34 8.36 0 10.91 0 14C0 17.31 2.69 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.35 10.04Z" fill="url(#azure_gradient)"/>
+                        <defs>
+                            <linearGradient id="azure_gradient" x1="0" y1="4" x2="24" y2="20" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#0078D4"/>
+                                <stop offset="1" stop-color="#00A4EF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </span>
+                <span class="brand-text">Azure<span class="text-primary fw-bold">Web</span></span>
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent"
+                    aria-expanded="false" aria-label="Navegación principal">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="Index">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#servicios">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#metricas">Métricas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacidad</a>
+                    </li>
+                </ul>
+                <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+                    <a href="#contacto" class="btn btn-outline-secondary btn-sm px-3 rounded-pill">Documentación</a>
+                    <a href="#contacto" class="btn btn-primary btn-sm px-3 rounded-pill shadow-sm">Consola Cloud</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main role="main">
+    @RenderBody()
+</main>
+
+<footer class="footer-cloud border-top">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="d-flex align-items-center gap-2 mb-3">
+                    <span class="brand-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4C9.11 4 6.6 5.64 5.35 8.04C2.34 8.36 0 10.91 0 14C0 17.31 2.69 20 6 20H19C21.76 20 24 17.76 24 15C24 12.36 21.95 10.22 19.35 10.04Z" fill="#0078D4"/>
+                        </svg>
+                    </span>
+                    <span class="brand-text h5 mb-0">Azure<span class="text-primary fw-bold">Web</span></span>
+                </div>
+                <p class="text-muted small mb-3">
+                    Plataforma web cloud nativa impulsada por ASP.NET Core y diseñada para alta resiliencia, rendimiento de vanguardia y despliegues empresariales.
+                </p>
+                <div class="d-flex align-items-center gap-2 text-success small">
+                    <span class="status-dot"></span>
+                    <span>Todos los servicios operativos</span>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+                <h6 class="footer-heading">Soluciones</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#servicios">App Services</a></li>
+                    <li><a href="#servicios">Bases de Datos</a></li>
+                    <li><a href="#servicios">Almacenamiento</a></li>
+                    <li><a href="#servicios">Seguridad Entra</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-2 col-md-3 col-6">
+                <h6 class="footer-heading">Plataforma</h6>
+                <ul class="list-unstyled footer-links">
+                    <li><a href="#metricas">Métricas SLA</a></li>
+                    <li><a href="#flujo">Arquitectura CI/CD</a></li>
+                    <li><a href="https://learn.microsoft.com/aspnet/core" target="_blank" rel="noopener">Documentación .NET</a></li>
+                    <li><a href="https://azure.microsoft.com" target="_blank" rel="noopener">Portal Azure</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <h6 class="footer-heading">Estado y Cumplimiento</h6>
+                <p class="text-muted small mb-3">
+                    Monitoreo en tiempo real bajo estándares de seguridad ISO/IEC 27001, SOC 2 y cifrado de datos en reposo y en tránsito.
+                </p>
+                <div class="footer-badge-group d-flex flex-wrap gap-2">
+                    <span class="badge bg-light text-secondary border">SLA 99.99%</span>
+                    <span class="badge bg-light text-secondary border">TLS 1.3</span>
+                    <span class="badge bg-light text-secondary border">ASP.NET Core</span>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-4 mt-4 border-top text-muted small">
+            <div>&copy; 2026 AzureWeb. Todos los derechos reservados.</div>
+            <div class="d-flex gap-3 mt-2 mt-sm-0">
+                <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-muted text-decoration-none">Privacidad</a>
+                <span class="text-muted">•</span>
+                <a href="#" class="text-muted text-decoration-none">Términos</a>
+                <span class="text-muted">•</span>
+                <a href="#" class="text-muted text-decoration-none">Soporte</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
