@@ -1,8 +1,65 @@
-bin/
-obj/
-/packages/
-riderModule.iml
-/_ReSharper.Caches/
-.idea/
-.vscode/
+## Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+## Visual Studio cache / config
+.vs/
+*.suo
 *.user
+*.userosscache
+*.sln.docstates
+*.opendb
+*.dbmdl
+*.dbmdl.lock
+
+## JetBrains Rider & Resharper
+.idea/
+riderModule.iml
+_ReSharper*/
+*.ReSharper
+*.DotSettings.user
+
+## Visual Studio Code
+.vscode/
+
+## User-specific files & local settings
+*.rsuser
+*.suo
+*.userprefs
+appsettings*.local.json
+secrets.json
+
+## Publish & Azure WebJobs / App Services
+*.pubxml
+*.pubxml.user
+*.publishsettings
+*.azurePubxml
+App_Data/
+
+## Test Results & coverage
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+*.visualstudio.diagnostics
+*.coverage
+*.coveragexml
+
+## NuGet Packages
+*.nupkg
+*.snupkg
+**/packages/*
+!**/packages/build/
+project.lock.json
+project.fragment.lock.json
+artifacts/
